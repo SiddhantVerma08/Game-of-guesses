@@ -1,0 +1,24 @@
+print("Hi Welcome to Game of guesses")
+no_of_attempt = 9
+secret_number = 65
+
+for attempt in range(no_of_attempt):
+    user = int(input("Guess the number :\n"))
+    if user == 65:
+        print("Congrats You did it", secret_number)
+
+    print("No. of chance left = ", no_of_attempt - 1)
+    no_of_attempt -= 1
+
+    if user < secret_number:
+        print("you enter less number please input greater number.\n")
+    elif user > secret_number:
+        print("you enter greater number please input smaller number.\n")
+
+    else:
+        print("You did it in", attempt + 1, "attempt")
+
+        break
+if user != secret_number:
+    print("Game Over")
+    print("The secret number was", secret_number)
